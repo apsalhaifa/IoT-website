@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Department of IoT" />
+    <meta name="keywords" content="Faculty, IoT Department" />
+    <meta name="description" content="Meet the Faculty of the Department of IoT" />
+
+    <!-- Title -->
+    <title>Faculty | Department of IoT</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- External Plugins -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/faculty.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="menu_area-light">
+        <!-- Navigation Menu -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">IoT Department</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#main">Main</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faculty.html">Faculty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#activities">Activities</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+              <li><a class="dropdown-item" href="#time-table">Time Table</a></li>
+              <li><a class="dropdown-item" href="#screen-casting">Screen Casting</a></li>
+              <li><a class="dropdown-item" href="#curriculum">Curriculum</a></li>
+              <li><a class="dropdown-item" href="#teaching-methodology">Innovative Teaching Methodology</a></li>
+              <li><a class="dropdown-item" href="#academic-calendar">Academic Calendar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Publications
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
+              <li><a class="dropdown-item" href="#faculty-publications">Faculty</a></li>
+              <li><a class="dropdown-item" href="#student-publications">Students</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    </header>
+
+    <!-- Main Section -->
+    <section id="faculty" class="mt-5">
+        <div class="container mt-5">
+            <div class="section-title text-center">
+                <h2>Our Faculty</h2>
+                <p>Meet our esteemed faculty members who are shaping the future of IoT.</p>
+            </div>
+            <div class="row">
+                <!-- Faculty Member 1 -->
+                <div class="col-md-4">
+                    <div class="card text-center faculty-card">
+                        <img src="img/faculty1.jpg" class="card-img-top faculty-image" alt="Dr. John Doe" onclick="toggleDetails(this)" />
+                        <div class="card-body faculty-details">
+                            <h5 class="card-title">Dr. John Doe</h5>
+                            <p class="card-text">Experience: 10 years</p>
+                            <p class="card-text">Specialization: IoT Systems</p>
+                            <button class="btn btn-primary">Contact</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 2 -->
+                <div class="col-md-4">
+                    <div class="card text-center faculty-card">
+                        <img src="img/faculty2.jpg" class="card-img-top faculty-image" alt="Dr. Jane Smith" onclick="toggleDetails(this)" />
+                        <div class="card-body faculty-details">
+                            <h5 class="card-title">Dr. Jane Smith</h5>
+                            <p class="card-text">Experience: 8 years</p>
+                            <p class="card-text">Specialization: IoT Architecture</p>
+                            <button class="btn btn-primary">Contact</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 3 -->
+                <div class="col-md-4">
+                    <div class="card text-center faculty-card">
+                        <img src="img/faculty3.jpg" class="card-img-top faculty-image" alt="Dr. Mark Brown" onclick="toggleDetails(this)" />
+                        <div class="card-body faculty-details">
+                            <h5 class="card-title">Dr. Mark Brown</h5>
+                            <p class="card-text">Experience: 5 years</p>
+                            <p class="card-text">Specialization: IoT Analytics</p>
+                            <button class="btn btn-primary">Contact</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3 text-center">
+        <p>&copy; 2024 Department of IoT. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script for toggling faculty details -->
+    <script>
+        function toggleDetails(image) {
+            // Toggle the visibility of the card details
+            const cardBody = image.nextElementSibling;
+
+            // If the card body is visible, hide it; otherwise, show it
+            if (cardBody.style.display === "none") {
+                cardBody.style.display = "block";
+            } else {
+                cardBody.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
