@@ -2,155 +2,152 @@
 <html lang="en">
 
 <head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Department of IoT" />
-    <meta name="keywords" content="Faculty, IoT Department" />
-    <meta name="description" content="Meet the Faculty of the Department of IoT" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="College Department Faculty Details">
+  <meta name="keywords" content="Faculty, Dean, Head of Department, College, Staff">
+  <meta name="author" content="Your College Name">
+  <title>Faculty - College Department</title>
 
-    <!-- Title -->
-    <title>Faculty | Department of IoT</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" />
+  <!-- AOS (Animate on Scroll) Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- External Plugins -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/faculty.css" />
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .faculty-box {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .faculty-box:hover {
+      transform: scale(1.05);
+    }
+
+    /* Fixed passport-size image */
+    .rounded-img {
+      width: 120px;  /* Passport size width */
+      height: 150px; /* Passport size height */
+      object-fit: cover; /* Ensure proper cropping */
+      border-radius: 10px; /* Optional rounded corners */
+      border: 2px solid #ddd; /* Border for visibility */
+    }
+
+    .modal-body img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="menu_area-light">
-        <!-- Navigation Menu -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top shadow-sm">
+
+  <!-- Faculty Section -->
+  <section id="dean-faculty" class="py-5 bg-white">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">IoT Department</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#main">Main</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faculty.html">Faculty</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#activities">Activities</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              More
+      <h2 class="text-center mb-5">Meet Our Faculty</h2>
+      <div class="row">
+        <!-- Dean -->
+        <div class="col-md-6">
+          <div class="faculty-box text-center" data-aos="fade-up">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#deanModal">
+              <img src="IoT mam new.jpg" alt="Dean" class="rounded-img">
             </a>
-            <ul class="dropdown-menu" aria-labelledby="moreDropdown">
-              <li><a class="dropdown-item" href="#time-table">Time Table</a></li>
-              <li><a class="dropdown-item" href="#screen-casting">Screen Casting</a></li>
-              <li><a class="dropdown-item" href="#curriculum">Curriculum</a></li>
-              <li><a class="dropdown-item" href="#teaching-methodology">Innovative Teaching Methodology</a></li>
-              <li><a class="dropdown-item" href="#academic-calendar">Academic Calendar</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Publications
+            <h6>Kaleeswari S</h6>
+            <p>Department of IoT</p>
+          </div>
+        </div>
+        <!-- Head of the Department -->
+        <div class="col-md-6">
+          <div class="faculty-box text-center" data-aos="fade-down">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#hodModal">
+              <img src="Iot mam.jpg" alt="Head of the Department" class="rounded-img">
             </a>
-            <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
-              <li><a class="dropdown-item" href="#faculty-publications">Faculty</a></li>
-              <li><a class="dropdown-item" href="#student-publications">Students</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
-          </li>
-        </ul>
+            <h6>Meena G</h6>
+            <p>Department of IoT</p>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
-  
-    </header>
+  </section>
 
-    <!-- Main Section -->
-    <section id="faculty" class="mt-5">
-        <div class="container mt-5">
-            <div class="section-title text-center">
-                <h2>Our Faculty</h2>
-                <p>Meet our esteemed faculty members who are shaping the future of IoT.</p>
-            </div>
-            <div class="row">
-                <!-- Faculty Member 1 -->
-                <div class="col-md-4">
-                    <div class="card text-center faculty-card">
-                        <img src="img/faculty1.jpg" class="card-img-top faculty-image" alt="Dr. John Doe" onclick="toggleDetails(this)" />
-                        <div class="card-body faculty-details">
-                            <h5 class="card-title">Dr. John Doe</h5>
-                            <p class="card-text">Experience: 10 years</p>
-                            <p class="card-text">Specialization: IoT Systems</p>
-                            <button class="btn btn-primary">Contact</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Faculty Member 2 -->
-                <div class="col-md-4">
-                    <div class="card text-center faculty-card">
-                        <img src="img/faculty2.jpg" class="card-img-top faculty-image" alt="Dr. Jane Smith" onclick="toggleDetails(this)" />
-                        <div class="card-body faculty-details">
-                            <h5 class="card-title">Dr. Jane Smith</h5>
-                            <p class="card-text">Experience: 8 years</p>
-                            <p class="card-text">Specialization: IoT Architecture</p>
-                            <button class="btn btn-primary">Contact</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Faculty Member 3 -->
-                <div class="col-md-4">
-                    <div class="card text-center faculty-card">
-                        <img src="img/faculty3.jpg" class="card-img-top faculty-image" alt="Dr. Mark Brown" onclick="toggleDetails(this)" />
-                        <div class="card-body faculty-details">
-                            <h5 class="card-title">Dr. Mark Brown</h5>
-                            <p class="card-text">Experience: 5 years</p>
-                            <p class="card-text">Specialization: IoT Analytics</p>
-                            <button class="btn btn-primary">Contact</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Dean Details Modal -->
+  <div class="modal fade" id="deanModal" tabindex="-1" aria-labelledby="deanModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deanModalLabel">Kaleeswari S</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-    </section>
+        <div class="modal-body">
+          <img src="IoT mam new.jpg" alt="Dean" class="rounded-img">
+          <p><strong>Unique ID:</strong> FD9901</p>
+          <p><strong>Designation:</strong> Assistant Professor</p>
+          <p><strong>Qualification:</strong> M.E (Software Engineering)</p>
+          <p><strong>Email:</strong> kalees112000@sethu.ac.in</p>
+          <p><strong>Experience:</strong> 5 months (Teaching)</p>
+          <p><strong>Research Focus:</strong> Credit Card Fraud Detection</p>
+          <p><strong>Subject Competency:</strong> Efficient Online Fraud Detection</p>
+          <p><strong>Conference Attended:</strong> 1</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-3 text-center">
-        <p>&copy; 2024 Department of IoT. All rights reserved.</p>
-    </footer>
+  <!-- HOD Details Modal -->
+  <div class="modal fade" id="hodModal" tabindex="-1" aria-labelledby="hodModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="hodModalLabel">Meena G</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Iot mam.jpg" alt="Head of the Department" class="rounded-img">
+          <p><strong>Unique ID:</strong> FD9892</p>
+          <p><strong>Designation:</strong> Assistant Professor</p>
+          <p><strong>Qualification:</strong> M.E (Software Engineering)</p>
+          <p><strong>Email:</strong> meenaganesan@sethu.ac.in</p>
+          <p><strong>Experience:</strong> 1 year (Teaching)</p>
+          <p><strong>Subject Competency:</strong> Data Structures & Algorithms, Computer Networks</p>
+          <p><strong>Conference Attended:</strong> 1</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS & Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-    <!-- Custom Script for toggling faculty details -->
-    <script>
-        function toggleDetails(image) {
-            // Toggle the visibility of the card details
-            const cardBody = image.nextElementSibling;
+  <!-- AOS (Animate on Scroll) Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <script>
+    AOS.init();  // Initialize AOS for animations
+  </script>
 
-            // If the card body is visible, hide it; otherwise, show it
-            if (cardBody.style.display === "none") {
-                cardBody.style.display = "block";
-            } else {
-                cardBody.style.display = "none";
-            }
-        }
-    </script>
 </body>
 
 </html>
